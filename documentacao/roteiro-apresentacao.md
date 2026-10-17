@@ -18,5 +18,5 @@ Use os slides em [`apresentacoes/slides.html`](../apresentacoes/slides.html) e g
 Apresentação do PortfolioHUB — Bootcamp I (Engenharia de Software, CEUB)
 🌐 Site: https://sckut.github.io/PortfolioHUB/
 💻 Repositório: https://github.com/sckut/PortfolioHUB
-🔗 LinkedIn: https://www.linkedin.com/in/SEU-LINKEDIN/
+🔗 LinkedIn: https://www.linkedin.com/in/marcus-vinicius-preard-resende-594656436/
 ```

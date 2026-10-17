@@ -2,7 +2,7 @@
 
 [![GitHub Pages](https://img.shields.io/badge/site-GitHub%20Pages-8b2c8f?logo=github)](https://sckut.github.io/PortfolioHUB/)
 [![Versão](https://img.shields.io/github/v/tag/sckut/PortfolioHUB?label=vers%C3%A3o&color=d6338a)](https://github.com/sckut/PortfolioHUB/tags)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-perfil-0a66c2?logo=linkedin)](https://www.linkedin.com/in/SEU-LINKEDIN/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-perfil-0a66c2?logo=linkedin)](https://www.linkedin.com/in/marcus-vinicius-preard-resende-594656436/)
 [![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-555)](LICENSE)
 
 > Repositório central de portfólio com meus projetos **acadêmicos** (Engenharia de Software — CEUB) e **pessoais**, versionado com Git e publicado com GitHub Pages.
@@ -101,7 +101,7 @@ Fluxo de trabalho: `main` (estável/publicada) ← `develop` ← `feature/*`. De
 ## 📬 Contato
 
 - **E-mail:** mvp.resende@gmail.com
-- **LinkedIn:** https://www.linkedin.com/in/SEU-LINKEDIN/
+- **LinkedIn:** https://www.linkedin.com/in/marcus-vinicius-preard-resende-594656436/
 - **GitHub:** https://github.com/sckut
 
 ---

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slides | PortfolioHUB</title>
+<style>
+  *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#120d16;color:#f4ecf6;overflow:hidden}
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6vh 8vw;background:radial-gradient(900px 500px at 90% 0%,rgba(214,51,138,.28),transparent),#120d16}
+  .slide.on{display:flex}
+  h1{font-size:clamp(28px,6vw,72px);margin:0 0 .3em;line-height:1.05}
+  h2{font-size:clamp(22px,4vw,48px);margin:0 0 .6em;color:#f06aaf}
+  p,li{font-size:clamp(14px,2.1vw,26px);line-height:1.5;color:#d9cade}
+  ul{margin:0;padding-left:1.2em}li{margin:.25em 0}
+  .grad{background:linear-gradient(90deg,#c77dd0,#f06aaf);-webkit-background-clip:text;background-clip:text;color:transparent}
+  code,pre{font-family:ui-monospace,Consolas,monospace}
+  pre{background:#0b080e;border:1px solid #33263b;border-radius:12px;padding:1em 1.2em;font-size:clamp(11px,1.6vw,20px);color:#e9dcef;margin:0;overflow:auto}
+  .k{color:#febc2e}.t{color:#f06aaf}
+  .n{position:fixed;bottom:2vh;right:3vw;font-size:14px;color:#8d7d93}
+  .bar{position:fixed;left:0;bottom:0;height:5px;background:linear-gradient(90deg,#8b2c8f,#d6338a);transition:width .3s}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:4vw}
+</style>
+</head>
+<body>
+<section class="slide on">
+  <p>Bootcamp I · Engenharia de Software · CEUB</p>
+  <h1>Portfolio<span class="grad"><em>HUB</em></span></h1>
+  <p>Repositório com versionamento, GitHub Pages e integração com o LinkedIn<br><strong>Marcus Vinicius Preard Resende</strong></p>
+</section>
+<section class="slide">
+  <h2>1. Planejamento</h2>
+  <div class="cols">
+    <ul><li>Projetos acadêmicos</li><li>Projetos pessoais</li><li>Documentação</li><li>Apresentações</li><li>Site (GitHub Pages)</li></ul>
+<pre>PortfolioHUB/
+├── index.html
+├── assets/
+├── projetos-academicos/
+├── projetos-pessoais/
+├── documentacao/
+├── apresentacoes/
+└── .github/</pre>
+  </div>
+</section>
+<section class="slide">
+  <h2>2. Versionamento com Git</h2>
+<pre>* <span class="k">(tag: v1.1.0, main)</span> release: v1.1.0
+|\
+| * docs: adiciona documentação e slides
+| * feat: reformula página do portfólio
+| * docs: adiciona READMEs dos projetos
+|/
+* <span class="k">(tag: v1.0.0)</span> feat: cria página inicial
+* chore: estrutura base do repositório</pre>
+  <p>SemVer · Conventional Commits · main ← develop ← feature/*</p>
+</section>
+<section class="slide">
+  <h2>3. Projetos em destaque</h2>
+  <ul>
+    <li><strong>Mandaká</strong> — pedidos online para restaurantes, sem taxas de marketplace</li>
+    <li><strong>Gestão de Eventos</strong> — SaaS de inventário (Next.js + Supabase)</li>
+    <li><strong>Clínica Vida+</strong> — modelagem de sistema de agendamento</li>
+    <li><strong>Study Hub</strong>, <strong>PontoApp</strong>, <strong>Jogo em Python</strong></li>
+  </ul>
+  <p>Cada projeto tem README: objetivo · funcionalidades · stack · como executar</p>
+</section>
+<section class="slide">
+  <h2>4. GitHub Pages</h2>
+  <ul><li>HTML, CSS e JS puros — leve, sem dependências</li><li>Filtro de projetos, modo escuro, layout responsivo</li><li>Seções de documentos, slides e vídeo</li><li>Publicado a partir da branch <code>main</code></li></ul>
+</section>
+<section class="slide">
+  <h2>5. LinkedIn</h2>
+  <ul><li>Repositório público + link de compartilhamento</li><li>Projeto na seção <strong>Projetos</strong> do perfil</li><li>Site na seção <strong>Em destaque</strong> e no contato</li></ul>
+</section>
+<section class="slide">
+  <h1 class="grad">Obrigado!</h1>
+  <p>🌐 sckut.github.io/PortfolioHUB<br>💻 github.com/sckut/PortfolioHUB</p>
+</section>
+<div class="n" id="n"></div><div class="bar" id="bar"></div>
+<script>
+  const s=[...document.querySelectorAll('.slide')];let i=0;
+  const show=()=>{s.forEach((x,j)=>x.classList.toggle('on',j===i));n.textContent=(i+1)+' / '+s.length;bar.style.width=((i+1)/s.length*100)+'%'};
+  const go=d=>{i=Math.max(0,Math.min(s.length-1,i+d));show()};
+  addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key))go(1);if(['ArrowLeft','PageUp'].includes(e.key))go(-1)});
+  addEventListener('click',e=>go(e.clientX>innerWidth/3?1:-1));show();
+</script>
+</body>
+</html>

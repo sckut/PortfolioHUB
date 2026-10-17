@@ -4,20 +4,195 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PortfolioHUB | Marcus Vinicius</title>
+  <meta name="description" content="Portfólio de Marcus Vinicius Preard Resende — estudante de Engenharia de Software (CEUB): projetos acadêmicos e pessoais.">
+  <meta property="og:title" content="PortfolioHUB | Marcus Vinicius">
+  <meta property="og:description" content="Projetos acadêmicos e pessoais versionados com Git e publicados no GitHub Pages.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%238b2c8f'/><text x='50' y='66' font-size='52' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'>M</text></svg>">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="topbar"><nav class="nav container"><a href="#" class="logo">Portfolio<em>HUB</em></a></nav></header>
-  <main>
-    <section class="hero">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#inicio" class="logo">Portfolio<em>HUB</em></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#documentos">Documentos</a></li>
+        <li><a href="#slides">Slides</a></li>
+        <li><a href="#versoes">Versões</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><button id="tema" class="tema" aria-label="Alternar tema claro/escuro">◐</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Engenharia de Software · CEUB · Brasília/DF</p>
+          <h1>Olá, eu sou <span class="grad">Marcus Vinicius</span>.</h1>
+          <p class="lead">Estudante de Engenharia de Software e empreendedor. Construo soluções para problemas reais de negócio — de sistemas de pedidos para restaurantes a gestão de equipamentos para eventos.</p>
+          <div class="cta">
+            <a class="btn primary" href="#projetos">Ver projetos</a>
+            <a class="btn" href="https://github.com/sckut/PortfolioHUB" target="_blank" rel="noopener">Repositório no GitHub</a>
+          </div>
+        </div>
+        <div class="terminal" aria-label="Exemplo de histórico do Git">
+          <div class="term-bar"><i></i><i></i><i></i><span>~/PortfolioHUB</span></div>
+<pre><code><span class="c">$</span> git log --oneline --graph
+* <b>a1f3c9e</b> <span class="t">(tag: v1.1.0, main)</span> release: v1.1.0
+|\
+| * docs: adiciona documentação
+| * feat: reformula página
+| * docs: READMEs dos projetos
+|/
+* <b>7d2e4b1</b> <span class="t">(tag: v1.0.0)</span> feat: página inicial
+* chore: estrutura base
+<span class="c">$</span> <span class="cursor">▍</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
       <div class="container">
-        <p class="eyebrow">Engenharia de Software · CEUB</p>
-        <h1>Olá, eu sou <span class="grad">Marcus Vinicius</span>.</h1>
-        <p class="lead">Este é o meu portfólio de projetos acadêmicos e pessoais. Versão 1.0 — em construção.</p>
-        <div class="cta"><a class="btn primary" href="https://github.com/sckut/PortfolioHUB">Repositório no GitHub</a></div>
+        <h2>Sobre mim</h2>
+        <div class="about">
+          <p>Curso <strong>Engenharia de Software no CEUB</strong>. Entre 2024 e 2026 atuei em várias frentes da operação de uma empresa de eventos em Brasília (som, iluminação, painéis de LED e estruturas) — experiência que hoje inspira os softwares que desenvolvo.</p>
+          <ul class="chips" aria-label="Interesses e habilidades">
+            <li>Cibersegurança</li><li>IA &amp; Dados</li><li>Git &amp; GitHub</li><li>HTML · CSS · JS</li><li>Python</li><li>Next.js · TypeScript</li><li>Supabase</li><li>UML &amp; Modelagem</li><li>Scrum / Kanban</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section alt">
+      <div class="container">
+        <h2>Projetos</h2>
+        <div class="filters" role="group" aria-label="Filtrar projetos">
+          <button class="filter active" data-f="todos">Todos</button>
+          <button class="filter" data-f="academico">Acadêmicos</button>
+          <button class="filter" data-f="pessoal">Pessoais</button>
+        </div>
+        <div class="grid">
+          <article class="card" data-cat="pessoal">
+            <span class="tag pessoal">Pessoal</span><span class="status s-dev">Em evolução</span>
+            <h3>🍽 Mandaká — Pedidos Online</h3>
+            <p>Plataforma de pedidos para restaurantes venderem direto ao cliente, sem taxas de marketplace: cardápio, carrinho, painel da cozinha e painel administrativo.</p>
+            <p class="stack">HTML · JavaScript · Supabase</p>
+            <a href="https://github.com/sckut/PortfolioHUB/tree/main/projetos-pessoais/mandaka-pedidos" target="_blank" rel="noopener">Ver README →</a>
+          </article>
+          <article class="card" data-cat="pessoal">
+            <span class="tag pessoal">Pessoal</span><span class="status s-dev">Em desenvolvimento</span>
+            <h3>🎛 Gestão de Eventos</h3>
+            <p>SaaS para empresas de equipamentos para eventos. Fase 1: módulo de inventário. Próximas fases: agenda, logística e multi-tenant.</p>
+            <p class="stack">Next.js · TypeScript · Supabase · Tailwind</p>
+            <a href="https://github.com/sckut/PortfolioHUB/tree/main/projetos-pessoais/gestao-eventos" target="_blank" rel="noopener">Ver README →</a>
+          </article>
+          <article class="card" data-cat="pessoal">
+            <span class="tag pessoal">Pessoal</span><span class="status s-ok">Funcional</span>
+            <h3>⏱ PontoApp</h3>
+            <p>Sistema web de registro de ponto: entrada, intervalos e saída, com histórico de marcações.</p>
+            <p class="stack">HTML · CSS · JavaScript</p>
+            <a href="https://github.com/sckut/PortfolioHUB/tree/main/projetos-pessoais/pontoapp" target="_blank" rel="noopener">Ver README →</a>
+          </article>
+          <article class="card" data-cat="academico">
+            <span class="tag academico">Acadêmico</span>
+            <h3>📘 Study Hub</h3>
+            <p>Projeto integrador do Bootcamp I: documento base, arquitetura de pastas no GitHub e pitch em vídeo.</p>
+            <p class="stack">Google Docs · GitHub · YouTube</p>
+            <a href="https://github.com/sckut/PortfolioHUB/tree/main/projetos-academicos/study-hub" target="_blank" rel="noopener">Ver README →</a>
+          </article>
+          <article class="card" data-cat="academico">
+            <span class="tag academico">Acadêmico</span>
+            <h3>🏥 Clínica Vida+</h3>
+            <p>Modelagem de um sistema de agendamento médico com diagramas de componentes, fluxo, ER e arquitetura.</p>
+            <p class="stack">UML · Modelagem ER</p>
+            <a href="https://github.com/sckut/PortfolioHUB/tree/main/projetos-academicos/clinica-vida-plus" target="_blank" rel="noopener">Ver README →</a>
+          </article>
+          <article class="card" data-cat="academico">
+            <span class="tag academico">Acadêmico</span>
+            <h3>🎲 Jogo de Adivinhação</h3>
+            <p>Jogo em Python com níveis de dificuldade, validação de entrada e dicas de maior/menor.</p>
+            <p class="stack">Python</p>
+            <a href="https://github.com/sckut/PortfolioHUB/tree/main/projetos-academicos/jogo-adivinhacao-python" target="_blank" rel="noopener">Ver código →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCUMENTOS -->
+    <section id="documentos" class="section">
+      <div class="container">
+        <h2>Documentos</h2>
+        <p class="sub">Documentação do repositório, organizada pelas etapas do desafio.</p>
+        <ol class="docs">
+          <li><a href="https://github.com/sckut/PortfolioHUB/blob/main/documentacao/planejamento-repositorio.md" target="_blank" rel="noopener"><b>1</b><span>Planejamento do repositório</span></a></li>
+          <li><a href="https://github.com/sckut/PortfolioHUB/blob/main/documentacao/guia-versionamento-git.md" target="_blank" rel="noopener"><b>2</b><span>Criação e versionamento com Git</span></a></li>
+          <li><a href="https://github.com/sckut/PortfolioHUB/blob/main/README.md" target="_blank" rel="noopener"><b>3</b><span>Organização e READMEs</span></a></li>
+          <li><a href="https://github.com/sckut/PortfolioHUB/blob/main/documentacao/github-pages.md" target="_blank" rel="noopener"><b>4</b><span>Publicação no GitHub Pages</span></a></li>
+          <li><a href="https://github.com/sckut/PortfolioHUB/blob/main/documentacao/integracao-linkedin.md" target="_blank" rel="noopener"><b>5</b><span>Integração com o LinkedIn</span></a></li>
+          <li><a href="https://github.com/sckut/PortfolioHUB/blob/main/documentacao/roteiro-apresentacao.md" target="_blank" rel="noopener"><b>6</b><span>Roteiro da apresentação</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SLIDES + VIDEO -->
+    <section id="slides" class="section alt">
+      <div class="container">
+        <h2>Slides &amp; Apresentação</h2>
+        <div class="media">
+          <div class="frame">
+            <iframe src="apresentacoes/slides.html" title="Slides da apresentação do PortfolioHUB"></iframe>
+          </div>
+          <div class="frame video" id="video" data-youtube="ID-DO-VIDEO">
+            <div class="video-ph">
+              <span>▶</span>
+              <p>Apresentação em vídeo (5 min)</p>
+              <a class="btn" href="https://youtu.be/ID-DO-VIDEO" target="_blank" rel="noopener">Assistir no YouTube</a>
+            </div>
+          </div>
+        </div>
+        <p class="sub"><a href="apresentacoes/slides.html" target="_blank" rel="noopener">Abrir slides em tela cheia ↗</a> — use as setas ← → para navegar.</p>
+      </div>
+    </section>
+
+    <!-- VERSOES -->
+    <section id="versoes" class="section">
+      <div class="container">
+        <h2>Histórico de versões</h2>
+        <ul class="timeline">
+          <li><span class="ver">v1.1.0</span><div><strong>Projetos, documentação e nova página</strong><p>Pastas e READMEs de cada projeto, documentação completa, slides, templates de PR/issue e página reformulada com filtros e modo escuro.</p></div></li>
+          <li><span class="ver">v1.0.0</span><div><strong>Primeira versão</strong><p>Página web inicial publicada no GitHub Pages, README, licença e .gitignore.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section alt">
+      <div class="container contato">
+        <h2>Vamos conversar?</h2>
+        <p class="sub">Aberto a estágios, projetos e parcerias.</p>
+        <div class="cta center">
+          <a class="btn primary" href="https://www.linkedin.com/in/SEU-LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/sckut" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="mailto:mvp.resende@gmail.com">E-mail</a>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="container">© 2026 Marcus Vinicius · v1.0.0</div></footer>
+
+  <footer class="footer">
+    <div class="container">© <span id="ano">2026</span> Marcus Vinicius Preard Resende · Feito com HTML, CSS e JS · Publicado com GitHub Pages</div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

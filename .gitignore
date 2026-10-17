@@ -1,0 +1,17 @@
+# Sistema
+.DS_Store
+Thumbs.db
+# Editores
+.vscode/
+.idea/
+# Ambiente e segredos
+.env
+.env.*
+!.env.example
+# Dependências e builds
+node_modules/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+dist/
+build/
